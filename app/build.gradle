@@ -13,7 +13,7 @@ android {
         minSdk 24
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "1.1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -55,6 +55,7 @@ dependencies {
 
     // koin DI
     implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
     testImplementation "io.insert-koin:koin-test:$koin_version"
 
     // KTX
