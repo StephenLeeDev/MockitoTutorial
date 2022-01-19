@@ -10,6 +10,7 @@ import org.koin.core.logger.Level
 /**
  * Written by StephenLeeDev on 2022/01/17.
  */
+
 class App: Application() {
 
     override fun onCreate() {
