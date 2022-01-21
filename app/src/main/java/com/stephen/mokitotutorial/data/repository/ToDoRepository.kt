@@ -10,6 +10,16 @@ interface ToDoRepository {
 
     suspend fun getToDoList(): List<ToDoModel>
 
+    suspend fun getToDoItem(id: Long): ToDoModel?
+
+    suspend fun insertToDoItem(toDoEntity: ToDoModel): Long
+
     suspend fun insertToDoList(toDoList: List<ToDoModel>)
+
+    suspend fun updateToDoItem(toDoEntity: ToDoModel)
+
+    suspend fun deleteToDoItem(id: Long)
+
+    suspend fun deleteAll()
 
 }
