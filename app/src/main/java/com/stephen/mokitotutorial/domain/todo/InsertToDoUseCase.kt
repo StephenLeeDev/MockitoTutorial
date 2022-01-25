@@ -8,8 +8,8 @@ internal class InsertToDoUseCase(
     private val toDoRepository: ToDoRepository
 ): UseCase {
 
-    suspend operator fun invoke(toDoEntity: ToDoModel): Long {
-        return toDoRepository.insertToDoItem(toDoEntity)
+    suspend operator fun invoke(toDoModel: ToDoModel): Long {
+        return toDoRepository.insertToDoItem(toDoModel)
     }
 
 }

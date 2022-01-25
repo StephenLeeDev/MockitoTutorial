@@ -18,18 +18,18 @@ class TestToDoRepository: ToDoRepository {
         return toDoList.find { it.id == id }
     }
 
-    override suspend fun insertToDoItem(toDoEntity: ToDoModel): Long {
-        this.toDoList.add(toDoEntity)
-        return toDoEntity.id
+    override suspend fun insertToDoItem(toDoModel: ToDoModel): Long {
+        this.toDoList.add(toDoModel)
+        return toDoModel.id
     }
 
     override suspend fun insertToDoList(toDoList: List<ToDoModel>) {
         this.toDoList.addAll(toDoList)
     }
 
-    override suspend fun updateToDoItem(toDoEntity: ToDoModel) {
-        val foundToDoModel = toDoList.find { it.id == toDoEntity.id }
-        this.toDoList[toDoList.indexOf(foundToDoModel)] = toDoEntity
+    override suspend fun updateToDoItem(toDoModel: ToDoModel) {
+        val foundToDoModel = toDoList.find { it.id == toDoModel.id }
+        this.toDoList[toDoList.indexOf(foundToDoModel)] = toDoModel
     }
 
     override suspend fun deleteToDoItem(id: Long) {

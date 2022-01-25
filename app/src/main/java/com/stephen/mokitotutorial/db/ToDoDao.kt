@@ -17,10 +17,10 @@ interface ToDoDao {
  suspend fun getById(id: Long): ToDoModel?
 
  @Insert
- suspend fun insert(toDoEntity: ToDoModel): Long
+ suspend fun insert(toDoModel: ToDoModel): Long
 
  @Insert(onConflict = OnConflictStrategy.REPLACE)
- suspend fun insert(toDoEntityList: List<ToDoModel>)
+ suspend fun insert(toDoModelList: List<ToDoModel>)
 
  @Query("DELETE FROM ToDoModel WHERE id=:id")
  suspend fun delete(id: Long)
@@ -29,6 +29,6 @@ interface ToDoDao {
  suspend fun deleteAll()
 
  @Update
- suspend fun update(toDoEntity: ToDoModel)
+ suspend fun update(toDoModel: ToDoModel)
 
 }

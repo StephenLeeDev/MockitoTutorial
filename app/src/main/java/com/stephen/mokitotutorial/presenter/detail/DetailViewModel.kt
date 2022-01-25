@@ -82,9 +82,9 @@ internal class DetailViewModel(
             DetailMode.DETAIL -> {
                 try {
                     getToDoItemUseCase(id)?.let {
-                        val updateToDoEntity = it.copy(title = title, description = description)
-                        updateToDoUseCase(updateToDoEntity)
-                        _toDoDetailLiveData.postValue(ToDoDetailState.Success(updateToDoEntity))
+                        val updateToDoModel = it.copy(title = title, description = description)
+                        updateToDoUseCase(updateToDoModel)
+                        _toDoDetailLiveData.postValue(ToDoDetailState.Success(updateToDoModel))
                     } ?: kotlin.run {
                         _toDoDetailLiveData.postValue(ToDoDetailState.Error)
                     }
