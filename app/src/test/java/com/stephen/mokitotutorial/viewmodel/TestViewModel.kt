@@ -53,7 +53,7 @@ internal abstract class TestViewModel : KoinTest {
     @After
     fun tearDown() {
         stopKoin()
-        Dispatchers.resetMain() // MainDispatcher를 초기화 해주어야 메모리 누수가 발생하지 않음
+        Dispatchers.resetMain()
     }
 
     protected fun <T> LiveData<T>.test(): LiveDataTestObserver<T> {
