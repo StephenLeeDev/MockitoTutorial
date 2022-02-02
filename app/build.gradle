@@ -53,6 +53,9 @@ dependencies {
     testImplementation 'org.mockito:mockito-inline:3.4.0'
     testImplementation "android.arch.core:core-testing:1.1.1"
 
+    // SwipeRefreshLayout
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
     // koin DI
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
