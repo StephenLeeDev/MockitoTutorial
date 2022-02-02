@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MokitoTutorial</string>
+
+    <string name="empty_list">Empty List</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="delete">Delete</string>
+    <string name="modify">Modify</string>
+    <string name="update">Update</string>
+    <string name="delete_all">Delete All</string>
 </resources>
