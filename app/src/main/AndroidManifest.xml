@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MokitoTutorial">
         <activity
+            android:name=".presenter.detail.DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".presenter.list.ListActivity"
             android:exported="true">
             <intent-filter>
